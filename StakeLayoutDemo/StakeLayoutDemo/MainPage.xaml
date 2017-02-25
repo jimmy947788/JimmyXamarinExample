@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	xmlns:local="clr-namespace:StakeLayoutDemo" 
+	Padding="20"
+	x:Class="StakeLayoutDemo.MainPage">
+	<ContentPage.Content>
+		<StackLayout Orientation="Horizontal" Spacing="10"
+			HorizontalOptions="Center"
+			VerticalOptions="Center">
+			<StackLayout Orientation="Vertical">
+				<Label Text="label1"/>
+				<Label Text="label2"/>
+			</StackLayout>
+			<Label Text="label3"/>
+			<Label Text="label4"/>
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>

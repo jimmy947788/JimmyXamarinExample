@@ -1,0 +1,28 @@
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	x:Class="StakeLayoutDemo.Example2Page">
+	<ContentPage.Padding>
+    	<OnPlatform x:TypeArguments="Thickness"
+                iOS="0, 20, 0, 0" />
+  	</ContentPage.Padding>
+	<ContentPage.Content>
+		<StackLayout>
+			<Label Text="AV片商鎖定重考生　進東大就能跟女優嘿咻"/>
+			<Image Aspect="AspectFill"
+				Source="http://twimg.edgesuite.net/images/ReNews/20150511/640_81010554464289b7c7d83354ca4555ce.jpg"/>
+			<StackLayout Orientation="Horizontal">
+				<Button Text="讚" />
+				<Button Text="留言" />
+				<Button Text="分享" />
+			</StackLayout>
+			<BoxView HeightRequest="1" BackgroundColor="#f0f0f0"/>
+			<StackLayout Padding="10">
+				<Label Text="700個讚" FontAttributes="Bold" />
+				<Label Text="日本AV片商真的在內容企劃上可說是絞盡腦汁，這次竟然把腦筋動到重考生身上，只要考上「日本第一」的大學，就有機會跟女優溫存。
+	日本AV片商「本中」日前在官方推特上發文，表示「招募重考生！上原亞衣幫重考生的最強應援，只要重考考上日本第一的大學，就有機會跟上原亞衣一親芳澤。」但文中並未明確指出「日本第一的大學」是哪一間，不過不少日本網友認為「就是東大」。
+	這個企劃引起不少網友的討論，許多網友留言表示「日本第一的大學？是東京大學耶！」、「一般來講都是講東大啦」、「重考生加油啊！」、「考上東大耶，難度太高了吧」、「會不會沒人考上，這個企劃就中止了」、「片商把九州大學、京都大學、東北大學放到哪去了。」（即時新聞中心／綜合報導）"/>
+			</StackLayout>
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>
+

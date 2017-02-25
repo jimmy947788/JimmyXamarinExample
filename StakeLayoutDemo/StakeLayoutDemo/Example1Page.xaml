@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+	xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	BackgroundColor="#127ac7"
+	x:Class="StakeLayoutDemo.Example1Page">
+	<ContentPage.Content>
+		<StackLayout VerticalOptions="Center" Spacing="20" >
+			<Label Text="Welcome To Daedalus Studio" 
+				FontSize="26" TextColor="White" 
+				HorizontalOptions="Center"/>
+			<Label Text="我是吳吉米" 
+				FontSize="18" TextColor="White" 
+				HorizontalOptions="Center"/>
+			<Button Text="登入" TextColor="White" BackgroundColor="#1dabf0"/>
+			<Button Text="註冊" TextColor="White" BackgroundColor="#1dabf0"/>
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>
