@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+	xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	BackgroundColor="#354242"
+	x:Class="GridDemo.Example1Page">
+	<Grid Margin="40">
+		<Grid.RowDefinitions>
+			<RowDefinition Height="2*"/>
+			<RowDefinition Height="*"/>
+			<RowDefinition Height="*"/>
+			<RowDefinition Height="*"/>
+			<RowDefinition Height="*"/>
+			<RowDefinition Height="*"/>
+		</Grid.RowDefinitions>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="*"/>
+			<ColumnDefinition Width="*"/>
+			<ColumnDefinition Width="*"/>
+		</Grid.ColumnDefinitions>
+		<Label x:Name="lblNumber" Text="1234" TextColor="White" FontSize="50" 
+			Grid.Row="0" Grid.ColumnSpan="3" 
+			HorizontalOptions="Center" VerticalOptions="Center"/>
+
+		<Button Text="1" BackgroundColor="White" 
+			FontSize="30" TextColor="Black"
+			BorderRadius="15" Clicked="Handle_Clicked"
+			Grid.Row="1" Grid.Column="0"/>
+		<Button Text="2" BackgroundColor="White"
+			BorderRadius="15" Clicked="Handle_Clicked"
+			FontSize="30" TextColor="Black"
+			Grid.Row="1" Grid.Column="1"/>
+		<Button Text="3" BackgroundColor="White" 
+			BorderRadius="15" Clicked="Handle_Clicked"
+			FontSize="30" TextColor="Black"
+			Grid.Row="1" Grid.Column="2"/>
+		<Button Text="4" BackgroundColor="White" 
+			BorderRadius="15" Clicked="Handle_Clicked"
+			FontSize="30" TextColor="Black"
+			Grid.Row="2" Grid.Column="0"/>
+		<Button Text="5" BackgroundColor="White" 
+			BorderRadius="15" Clicked="Handle_Clicked"
+			FontSize="30" TextColor="Black"
+			Grid.Row="2" Grid.Column="1"/>
+		<Button Text="6" BackgroundColor="White" 
+			BorderRadius="15" Clicked="Handle_Clicked"
+			FontSize="30" TextColor="Black"
+			Grid.Row="2" Grid.Column="2"/>
+		<Button Text="7" BackgroundColor="White" 
+			BorderRadius="15" Clicked="Handle_Clicked"
+			FontSize="30" TextColor="Black"
+			Grid.Row="3" Grid.Column="0"/>
+		<Button Text="8" BackgroundColor="White" 
+			BorderRadius="15" Clicked="Handle_Clicked"
+			FontSize="30" TextColor="Black"
+			Grid.Row="3" Grid.Column="1"/>
+		<Button Text="9" BackgroundColor="White" 
+			BorderRadius="15" Clicked="Handle_Clicked"
+			FontSize="30" TextColor="Black"
+			Grid.Row="3" Grid.Column="2"/>
+
+		<Button Text="0" BackgroundColor="White" 
+			BorderRadius="15" Clicked="Handle_Clicked"
+			FontSize="30" TextColor="Black"
+			Grid.Row="4" Grid.Column="1"/>
+
+		<Button Text="撥號" BackgroundColor="#96ca2d" 
+			BorderRadius="15" Clicked="Dial_Click"
+			FontSize="30" TextColor="Black"
+			Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="3"/>
+	</Grid>
+</ContentPage>

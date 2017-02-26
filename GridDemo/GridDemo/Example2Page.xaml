@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+	xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	BackgroundColor="#127ac7"
+	x:Class="GridDemo.Example2Page">
+	<Grid RowSpacing="10" Margin="20">
+		<Grid.RowDefinitions>
+			<RowDefinition Height="*"/>
+			<RowDefinition Height="Auto"/>
+			<RowDefinition Height="Auto"/>
+		</Grid.RowDefinitions>
+		<StackLayout VerticalOptions="Center" 
+				Grid.Row="0">
+			<Label Text="Welcome to Daedalus Studio" 
+				FontSize="25" TextColor="White" 
+				HorizontalOptions="Center"/>
+			<Label Text="我是吳吉米"
+				FontSize="18" TextColor="White" 
+				HorizontalOptions="End"/>
+		</StackLayout>
+		<Button Text="登入" TextColor="White" BackgroundColor="#1dabf0" 
+			Grid.Row="1"/>
+		<Button Text="註冊" TextColor="White" BackgroundColor="#1dabf0" 
+			Grid.Row="2"/>
+	</Grid>
+</ContentPage>

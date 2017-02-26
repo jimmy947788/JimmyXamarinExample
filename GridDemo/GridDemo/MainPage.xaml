@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage 
+	xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	xmlns:local="clr-namespace:GridDemo" 
+	x:Class="GridDemo.MainPage">
+	<!--<Grid>
+  		<Grid.RowDefinitions>
+    		<RowDefinition Height="*" />
+    		<RowDefinition Height="100" />
+	  	</Grid.RowDefinitions>
+	 	<Grid.ColumnDefinitions>
+	    	<ColumnDefinition Width="*" />
+	    	<ColumnDefinition Width="*" />
+	  	</Grid.ColumnDefinitions>
+		<Label Text="Top Left" BackgroundColor="Red"
+			Grid.Row="0" Grid.Column="0" />
+	  	<Label Text="Top Right" BackgroundColor="Green"
+			Grid.Row="0" Grid.Column="1" />
+	  	<Label Text="Bottom Left" BackgroundColor="Blue"
+			Grid.Row="1" Grid.Column="0" />
+	  	<Label Text="Bottom Right" BackgroundColor="Yellow"
+			Grid.Row="1" Grid.Column="1" />
+	</Grid>-->
+</ContentPage>
