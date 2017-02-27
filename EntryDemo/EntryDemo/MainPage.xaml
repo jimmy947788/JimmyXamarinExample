@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage 
+	xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	xmlns:local="clr-namespace:EntryDemo" 
+	xmlns:controls="clr-namespace:EntryDemo.Controls" 
+	Padding="20"
+	x:Class="EntryDemo.MainPage">
+	<StackLayout>
+		<controls:NoBorderEntry Placeholder="Username" Keyboard="Chat" />
+		<controls:NoBorderEntry Placeholder="Phone" Keyboard="Telephone"/>
+		<controls:NoBorderEntry Placeholder="Email" Keyboard="Email"/>
+		<controls:NoBorderEntry Placeholder="Password" IsPassword="true"/>
+	</StackLayout>
+
+</ContentPage>
