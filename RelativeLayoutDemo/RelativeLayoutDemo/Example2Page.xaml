@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+	xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	x:Class="RelativeLayoutDemo.Example2Page">
+	<ContentPage.Padding>
+    	<OnPlatform x:TypeArguments="Thickness"
+                iOS="0, 20, 0, 0" />
+  	</ContentPage.Padding>
+	<ContentPage.Content>
+		<RelativeLayout>
+			<Image x:Name="imgJulia" Aspect="AspectFill"
+				Source="http://www.dushi.ca/upload_files/p8_news_/11/1uk7u__W020120112569763378863.jpg"
+				RelativeLayout.XConstraint="{
+					ConstraintExpression 
+						Type=Constant,
+						Constant=0
+				}"
+				RelativeLayout.YConstraint="{
+					ConstraintExpression 
+						Type=Constant,
+						Constant=0
+				}"
+				RelativeLayout.WidthConstraint="{
+					ConstraintExpression 
+						Type=RelativeToParent,
+						Property=Width,
+						Factor=1,
+						Constant=0
+				}"
+				RelativeLayout.HeightConstraint="{
+					ConstraintExpression 
+						Type=RelativeToParent,
+						Property=Height,
+						Factor=1,
+						Constant=0
+				}"
+				/>
+			<BoxView Color="Green" 
+				WidthRequest="180"
+				HeightRequest="60"
+				RelativeLayout.XConstraint="{
+					ConstraintExpression 
+						Type=RelativeToView,
+		            	ElementName=imgJulia,
+						Property=X,
+						Factor=1,
+						Constant=155
+				}"
+				RelativeLayout.YConstraint="{
+					ConstraintExpression 
+						Type=RelativeToView,
+		            	ElementName=imgJulia,
+						Property=Y,
+						Factor=1,
+						Constant=290
+				}"/>
+			<Label x:Name="lblLike" BackgroundColor="Black"
+					Text="喜歡" FontSize="30"
+					TextColor="Red" Opacity="0.8"
+					VerticalTextAlignment="Center"
+					HorizontalTextAlignment="Center"
+					HeightRequest="60"
+					RelativeLayout.YConstraint="{
+						ConstraintExpression 
+							Type=RelativeToParent,
+							Property=Height,
+							Factor=1,
+							Constant=-60
+					}"
+					RelativeLayout.WidthConstraint="{
+						ConstraintExpression 
+							Type=RelativeToParent,
+							Property=Width,
+							Factor=0.5,
+							Constant=0
+					}"/>
+			<Label BackgroundColor="Black"
+					Text="送禮物" FontSize="30"
+					TextColor="White" Opacity="0.8"
+					VerticalTextAlignment="Center"
+					HorizontalTextAlignment="Center"
+					HeightRequest="60"
+					RelativeLayout.XConstraint="{
+						ConstraintExpression 
+							Type=RelativeToView,
+			            	ElementName=lblLike,
+							Property=Width,
+							Factor=1,
+							Constant=0
+					}"
+					RelativeLayout.YConstraint="{
+						ConstraintExpression 
+							Type=RelativeToParent,
+							Property=Height,
+							Factor=1,
+							Constant=-60
+					}"
+					RelativeLayout.WidthConstraint="{
+						ConstraintExpression 
+							Type=RelativeToParent,
+							Property=Width,
+							Factor=0.5,
+							Constant=0
+					}"/>
+
+			<Label BackgroundColor="#127ac7"
+					Text="JULIA是您喜歡的類型" FontSize="20"
+					TextColor="White" Opacity="0.6"
+					VerticalTextAlignment="Center"
+					HorizontalTextAlignment="Center"
+					RelativeLayout.WidthConstraint="{
+						ConstraintExpression 
+							Type=RelativeToParent,
+							Property=Width,
+							Factor=1,
+							Constant=0
+					}"
+					RelativeLayout.HeightConstraint="{
+						ConstraintExpression 
+							Type=Constant,
+							Constant=40
+					}"/>
+		</RelativeLayout>
+	</ContentPage.Content>
+</ContentPage>

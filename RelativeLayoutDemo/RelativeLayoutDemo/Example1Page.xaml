@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+	xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	x:Class="RelativeLayoutDemo.Example1Page">
+	<RelativeLayout>
+		<Image x:Name="imgMail"
+			Source="https://cdn2.iconfinder.com/data/icons/metro-uinvert-dock/256/Mail.png"
+			WidthRequest="100"
+			HeightRequest="100"
+			BackgroundColor="Yellow"
+			RelativeLayout.XConstraint="{
+				ConstraintExpression 
+					Type=RelativeToParent,
+					Property=Width,
+					Factor=0.5,
+					Constant=-50
+			}"
+			RelativeLayout.YConstraint="{
+				ConstraintExpression 
+					Type=RelativeToParent,
+					Property=Height,
+					Factor=0.5,
+					Constant=-50
+			}"
+		/>
+		<Image Source="http://www.haotu.net/up/4002/128/93-dot-red.png"
+			HeightRequest="40"
+			WidthRequest="40"
+			RelativeLayout.XConstraint="{
+				ConstraintExpression 
+					Type=RelativeToView,
+	            	ElementName=imgMail,
+					Property=X,
+					Factor=1,
+					Constant=80
+			}"
+			RelativeLayout.YConstraint="{
+				ConstraintExpression 
+					Type=RelativeToView,
+	            	ElementName=imgMail,
+					Property=Y,
+					Factor=1,
+					Constant=0
+			}"
+		/>
+	</RelativeLayout>
+</ContentPage>
