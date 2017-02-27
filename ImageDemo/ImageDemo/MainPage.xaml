@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage 
+	xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	xmlns:local="clr-namespace:ImageDemo" 
+	xmlns:controls="clr-namespace:XLabs.Forms.Controls;assembly=XLabs.Forms"
+	x:Class="ImageDemo.MainPage">
+	<!--<controls:CircleImage 
+				WidthRequest="300"
+				HeightRequest="300"
+				Aspect="AspectFit"
+				Source="http://eznewlife.com/uploads/1458175042-t7ycI.jpg"/>-->
+
+	 <controls:WebImage
+			DefaultImage="no_image.png" 
+			ImageUrl="http://twimg.edgesuite.net/images/ReNews/20150920/640_2549783a86d40a8ca8b31a81f182a710.jpg" />
+</ContentPage>
