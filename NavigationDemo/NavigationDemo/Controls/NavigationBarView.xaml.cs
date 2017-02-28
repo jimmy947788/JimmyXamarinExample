@@ -34,7 +34,7 @@ namespace NavigationDemo.Controls
 				typeof(string),
 				typeof(NavigationBarView),
 				"this is Title",
-				propertyChanging: OnTitlePropertyChanged
+				propertyChanged: OnTitlePropertyChanged
 			);
 		public string Title
 		{
