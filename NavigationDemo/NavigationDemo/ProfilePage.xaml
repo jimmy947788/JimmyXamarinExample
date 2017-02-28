@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+	xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	xmlns:controls="clr-namespace:NavigationDemo.Controls" 
+	Title="Profile"
+	BackgroundColor="Gray"
+	NavigationPage.HasNavigationBar="false"
+	NavigationPage.HasBackButton="false"
+	x:Class="NavigationDemo.ProfilePage">
+	<ContentPage.Padding>
+    	<OnPlatform x:TypeArguments="Thickness" iOS="0, 20, 0, 0" />
+  	</ContentPage.Padding>
+	<ContentPage.Content>
+		<StackLayout Spacing="0">
+			<StackLayout>
+				<controls:NavigationBarView Title="{Binding Title}" />
+				<Label Text="餌食情報"/>
+				<Label Text="名前 ：小坂詩織 (Shiori Kosaka）"/>
+				<Label Text="身長 ：162cm"/>
+				<Label Text="スリーサイズ ： B82(B). W58. H84"/>
+				<Label Text="靴サイズ : 24cm"/>
+				<Label Text="星座 ：水瓶座"/>
+				<Label Text="血液型 ：A型"/>
+				<Label Text="出身地 ：東京都"/>
+				<Label Text="趣味 ：歌うこと"/>
+				<Label Text="好きなタイプ ：草食系男子"/>
+				<Label Text="好きなスポーツ ：バドミントン"/>
+				<Label Text="好きなタレント：綾野剛"/>
+				<Label Text="特技 ：マッサージ"/>
+				<Label Text="好きな食べ物：ラーメン"/>
+				<Button Text="Leave" Clicked="Handle_Clicked" />
+			</StackLayout>
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>

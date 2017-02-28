@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentView 
+	xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	x:Class="NavigationDemo.Controls.NavigationBarView">
+	<ContentView.Content>
+		<Grid RowSpacing="0" ColumnSpacing="0">
+			<Grid.RowDefinitions>
+				<RowDefinition Height="44"></RowDefinition>
+				<RowDefinition Height="1"></RowDefinition>
+			</Grid.RowDefinitions>
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="44"></ColumnDefinition>
+				<ColumnDefinition Width="*"></ColumnDefinition>
+				<ColumnDefinition Width="Auto"></ColumnDefinition>
+			</Grid.ColumnDefinitions>
+			<ContentView Grid.Row="0" Grid.Column="0">
+				<Image Source="NavBack.png" 
+					WidthRequest="11.98" 
+					HeightRequest="20.79"
+					HorizontalOptions="Center" VerticalOptions="Center"/>
+				<ContentView.GestureRecognizers>
+    				<TapGestureRecognizer Tapped="Handle_Tapped"  />
+				</ContentView.GestureRecognizers>
+			</ContentView>
+			<Label x:Name="lblTitle" TextColor="#333333"
+					HorizontalOptions="CenterAndExpand" 
+					VerticalOptions="CenterAndExpand"
+					Grid.Row="0" Grid.Column="1"/>
+			<ContentView Grid.Row="0" Grid.Column="2">
+				<Label x:Name="lblRightLebel" Text="Done" 
+					TextColor="#3EACE9" 
+					VerticalOptions="CenterAndExpand" />
+				<ContentView.GestureRecognizers>
+    				<TapGestureRecognizer />
+				</ContentView.GestureRecognizers>
+			</ContentView>
+			<BoxView BackgroundColor="#D3D4D6" Grid.ColumnSpan="3"
+					Grid.Row="1" Grid.Column="0" />
+		</Grid>
+	</ContentView.Content>
+
+</ContentView>
