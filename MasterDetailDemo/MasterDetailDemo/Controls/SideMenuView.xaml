@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentView 
+	xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	x:Class="MasterDetailDemo.Controls.SideMenuView">
+	<ContentView.Content>
+		<RelativeLayout>
+			<ContentView x:Name="grayOverlay"
+				BackgroundColor="Black" Opacity="0.3"
+				RelativeLayout.XConstraint="{
+					ConstraintExpression 
+						Type=Constant, 
+	                  	Constant=0
+					}"
+	            RelativeLayout.YConstraint="{
+					ConstraintExpression 
+						Type=Constant, 
+	                    Constant=0
+					}"
+				RelativeLayout.WidthConstraint="{
+					ConstraintExpression 
+						Type=RelativeToParent, 
+	                    Property=Width,
+	                    Factor=1
+				}"
+				RelativeLayout.HeightConstraint="{
+					ConstraintExpression 
+						Type=RelativeToParent, 
+	                    Property=Height,
+	                    Factor=1
+				}">
+	    		<ContentView.GestureRecognizers>
+	        		<TapGestureRecognizer Tapped="OnHideMenuTapped" />
+	  			</ContentView.GestureRecognizers>
+			</ContentView>
+			<ContentView x:Name="menuShadow" 
+				BackgroundColor="Black" Opacity="0.4"
+				RelativeLayout.XConstraint="{
+					ConstraintExpression 
+						Type=RelativeToView, 
+						ElementName=menu,
+						Property=Width,
+						Factor=1,
+	                  	Constant=0
+					}"
+	            RelativeLayout.YConstraint="{
+					ConstraintExpression 
+						Type=Constant, 
+	                    Constant=0
+					}"
+				RelativeLayout.WidthConstraint="{
+					ConstraintExpression 
+						Type=Constant, 
+	                  	Constant=3
+					}"
+				RelativeLayout.HeightConstraint="{
+					ConstraintExpression 
+						Type=RelativeToParent, 
+	                    Property=Height,
+	                    Factor=1
+				}">
+			</ContentView>
+			<ContentView x:Name="menu" BackgroundColor="Black"
+				RelativeLayout.XConstraint="{
+					ConstraintExpression 
+						Type=Constant, 
+	                  	Constant=0
+					}"
+	            RelativeLayout.YConstraint="{
+					ConstraintExpression 
+						Type=Constant, 
+	                    Constant=0
+					}"
+				RelativeLayout.WidthConstraint="{
+					ConstraintExpression 
+						Type=Constant, 
+	                  	Constant=200
+					}"
+				RelativeLayout.HeightConstraint="{
+					ConstraintExpression 
+						Type=RelativeToParent, 
+	                    Property=Height,
+	                    Factor=1
+				}">
+				<StackLayout>
+					<BoxView HeightRequest="80" Color="Gray"/>
+					<Label Text="TOMN-073" TextColor="White" Margin="20,0,0,0">
+						<ContentView.GestureRecognizers>
+	        				<TapGestureRecognizer Tapped="OnItemSelected" />
+	  					</ContentView.GestureRecognizers>
+					</Label>
+					<BoxView HeightRequest="1" Color="White"/>
+					<Label Text="MUKD-407" TextColor="White" Margin="20,0,0,0">
+						<ContentView.GestureRecognizers>
+	        				<TapGestureRecognizer Tapped="OnItemSelected" />
+	  					</ContentView.GestureRecognizers>
+					</Label>
+					<BoxView HeightRequest="1" Color="White"/>
+					<Label Text="PGD-882" TextColor="White" Margin="20,0,0,0">
+						<ContentView.GestureRecognizers>
+	        				<TapGestureRecognizer Tapped="OnItemSelected" />
+	  					</ContentView.GestureRecognizers>
+					</Label>
+					<BoxView HeightRequest="1" Color="White"/>
+					<Label Text="SDSI-062" TextColor="White" Margin="20,0,0,0">
+						<ContentView.GestureRecognizers>
+	        				<TapGestureRecognizer Tapped="OnItemSelected" />
+	  					</ContentView.GestureRecognizers>
+					</Label>
+					<BoxView HeightRequest="1" Color="White"/>
+				</StackLayout>
+			</ContentView>
+		</RelativeLayout>
+	</ContentView.Content>
+</ContentView>
