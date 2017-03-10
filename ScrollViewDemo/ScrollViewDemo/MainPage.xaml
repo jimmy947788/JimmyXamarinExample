@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage 
+	xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	xmlns:local="clr-namespace:ScrollViewDemo" 
+	xmlns:controls="clr-namespace:ScrollViewDemo.Controls" 
+	Padding="0,20,0,0"
+	x:Class="ScrollViewDemo.MainPage">
+	<StackLayout>
+		<controls:HMenuView x:Name="hMenuView" ItemSelectd="Handle_ItemSelectd"/>
+		<!--<StackLayout Orientation="Horizontal">
+			<Button Text="Photo1" Clicked="Photo1_Click"/>
+			<Button Text="Photo2" Clicked="Photo2_Click"/>
+			<Button Text="Photo3" Clicked="Photo3_Click"/>
+			<Button Text="Photo4" Clicked="Photo4_Click"/>
+			<Button Text="Photo5" Clicked="Photo5_Click"/>
+		</StackLayout>-->
+		<ScrollView x:Name="scrollView" Orientation="Horizontal">
+			<StackLayout Spacing="0" Orientation="Horizontal">
+				<Image Source="A0001.jpg" WidthRequest="400"/>
+				<Image Source="A0002.jpg" WidthRequest="400"/>
+				<Image Source="A0003.jpg" WidthRequest="400"/>
+				<Image Source="A0004.jpg" WidthRequest="400"/>
+				<Image Source="A0005.jpg" WidthRequest="400"/>
+			</StackLayout>
+		</ScrollView>
+	</StackLayout>
+</ContentPage>

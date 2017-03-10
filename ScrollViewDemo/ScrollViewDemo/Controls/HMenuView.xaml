@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+		xmlns:controls="clr-namespace:ScrollViewDemo.Controls;assembly=ScrollViewDemo"
+		x:Class="ScrollViewDemo.Controls.HMenuView">
+	<ContentView.Content>
+		<StackLayout Spacing="0">
+			<ScrollView Padding="0" Margin="0" Orientation="Horizontal" >
+				<StackLayout x:Name="slMenuItems" Spacing="0" Orientation="Horizontal">
+					<controls:HMenuItemView Text="Item1" Value="0" Selected="true" />
+					<controls:HMenuItemView Text="Item2" Value="1" Selected="false" />
+					<controls:HMenuItemView Text="Item3" Value="2" Selected="false" />
+					<controls:HMenuItemView Text="Item4" Value="3" Selected="false" />
+					<controls:HMenuItemView Text="Item5" Value="4" Selected="false" />
+				</StackLayout>
+			</ScrollView>
+			<BoxView HeightRequest="1" BackgroundColor="#D3D4D6"></BoxView>
+		</StackLayout>
+	</ContentView.Content>
+</ContentView>
