@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage 
+	xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	xmlns:local="clr-namespace:ListViewDemo" 
+	xmlns:controls="clr-namespace:ListViewDemo.Controls"
+	Title="Tokyp-Hot"
+	x:Class="ListViewDemo.ListViewDemoPage">
+	<ListView x:Name="listView"
+		HasUnevenRows="true"
+		IsPullToRefreshEnabled="true"
+		IsGroupingEnabled="True"
+        GroupDisplayBinding="{Binding Key}"
+		Refreshing="Handle_Refreshing"
+		ItemSelected="Handle_ItemSelected"
+		ItemTapped="Handle_ItemTapped">
+		<ListView.GroupHeaderTemplate>
+			<DataTemplate>
+				<ViewCell>
+					<Label Text="{Binding Key}" TextColor="Red"/>
+				</ViewCell>
+			</DataTemplate>
+		</ListView.GroupHeaderTemplate>
+		<ListView.ItemTemplate>
+			<DataTemplate>
+				<controls:ActorCell 
+					ID="{Binding ID}"
+					Name="{Binding Name}"
+					Photo="{Binding Photo}"
+					Sign="{Binding Sign}"
+					BloodType="{Binding BloodType}"/>
+			</DataTemplate>
+		</ListView.ItemTemplate>
+	</ListView>
+</ContentPage>
