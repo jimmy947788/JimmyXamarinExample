@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage 
+		xmlns="http://xamarin.com/schemas/2014/forms" 
+		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+		xmlns:local="clr-namespace:ＭvvmDemo"
+		xmlns:controls="clr-namespace:ＭvvmDemo.Controls;assembly=ＭvvmDemo"
+		xmlns:mvvms="clr-namespace:ＭvvmDemo.ViewModels;assembly=ＭvvmDemo"
+		Title="{Binding Title}"
+		Padding="0,20,0,0"
+		BindingContext="{StaticResource masterViewModel}"
+		x:Class="ＭvvmDemo.Views.MasterPage">
+	<ContentPage.Resources>
+    	<ResourceDictionary>
+    		<mvvms:MasterViewModel 
+				x:Name="masterViewModel" 
+				x:Key="masterViewModel"/>
+    	</ResourceDictionary>
+  	</ContentPage.Resources>
+	<ListView ItemsSource="{Binding Details}"
+		SeparatorVisibility="None"
+		HasUnevenRows="true">
+		<ListView.ItemTemplate>
+			<DataTemplate>
+				<controls:ActorCell 
+					Actor="{Binding Actor}"
+					ItemTappedCommand="{
+						Binding Source={StaticResource masterViewModel}, 
+						Path=ItemTappedCommand
+					}"/>
+			</DataTemplate>
+		</ListView.ItemTemplate>
+	</ListView>
+</ContentPage>

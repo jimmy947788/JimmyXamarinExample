@@ -1,0 +1,23 @@
+<ViewCell 
+	xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	x:Class="ＭvvmDemo.Controls.ActorCell">
+	<StackLayout Orientation="Horizontal"
+			VerticalOptions="Start">
+		<Image x:Name="imgPhoto" Source="A0001.jpg" 
+			HeightRequest="80"
+			WidthRequest="80"/>
+		<StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
+			<Label x:Name="lblName" Text="杏樹紗奈" 
+				FontSize="22"/>
+			<StackLayout Orientation="Horizontal" >
+				<Label x:Name="lblSign" Text="山羊座" HorizontalOptions="Start"/>
+				<Label x:Name="lblBloodType" Text="O型" HorizontalOptions="Start"/>
+			</StackLayout >
+		</StackLayout>
+		<StackLayout.GestureRecognizers>
+			<TapGestureRecognizer Tapped="ActorCell_Tapped" />
+		</StackLayout.GestureRecognizers>
+  	</StackLayout>
+</ViewCell>
+

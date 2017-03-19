@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+		Title="{Binding Title}"
+		x:Class="ＭvvmDemo.Views.DetailPage">
+	<ContentPage.Content>
+		<ScrollView>
+			<StackLayout>
+				<Image Source="{Binding Actor.Photo}" WidthRequest="150" HeightRequest="150"/>
+				<!-- Item1 -->
+				<StackLayout Orientation="Horizontal" Padding="10,5,10,0" HorizontalOptions="FillAndExpand">
+					<Label Text="顔出し" HorizontalOptions="StartAndExpand"/>
+					<Label Text="2000" HorizontalOptions="End"/>
+					<Switch IsToggled="{Binding IsAggreeItem1}" />
+				</StackLayout>
+				<BoxView Margin="10,0,0,0" HeightRequest="1" BackgroundColor="Gray"/>
+				<!-- Item2 -->
+				<StackLayout Orientation="Horizontal" Padding="10,5,10,0" HorizontalOptions="FillAndExpand">
+					<Label Text="全裸" HorizontalOptions="StartAndExpand"/>
+					<Label Text="4000" HorizontalOptions="End"/>
+					<Switch IsToggled="{Binding IsAggreeItem2}" />
+				</StackLayout>
+				<BoxView Margin="10,0,0,0" HeightRequest="1" BackgroundColor="Gray"/>
+				<!-- Item3 -->
+				<StackLayout Orientation="Horizontal" Padding="10,5,10,0" HorizontalOptions="FillAndExpand">
+					<Label Text="野外露出" HorizontalOptions="StartAndExpand"/>
+					<Label Text="8000" HorizontalOptions="End"/>
+					<Switch IsToggled="{Binding IsAggreeItem3}" />
+				</StackLayout>
+				<BoxView Margin="10,0,0,0" HeightRequest="1" BackgroundColor="Gray"/>
+				<!-- Item4 -->
+				<StackLayout Orientation="Horizontal" Padding="10,5,10,0" HorizontalOptions="FillAndExpand">
+					<Label Text="ユニフォーム" HorizontalOptions="StartAndExpand"/>
+					<Label Text="3000" HorizontalOptions="End"/>
+					<Switch IsToggled="{Binding IsAggreeItem4}" />
+				</StackLayout>
+				<BoxView Margin="10,0,0,0" HeightRequest="1" BackgroundColor="Gray"/>
+				<!-- Item5 -->
+				<StackLayout Orientation="Horizontal" Padding="10,5,10,0" HorizontalOptions="FillAndExpand">
+					<Label Text="キス" HorizontalOptions="StartAndExpand"/>
+					<Label Text="1000" HorizontalOptions="End"/>
+					<Switch IsToggled="{Binding IsAggreeItem5}" />
+				</StackLayout>
+				<BoxView Margin="10,0,0,0" HeightRequest="1" BackgroundColor="Gray"/>
+				<!-- Item6 -->
+				<StackLayout Orientation="Horizontal" Padding="10,5,10,0" HorizontalOptions="FillAndExpand">
+					<Label Text="フェラチオ" HorizontalOptions="StartAndExpand"/>
+					<Label Text="5000" HorizontalOptions="End"/>
+					<Switch IsToggled="{Binding IsAggreeItem6}" />
+				</StackLayout>
+				<BoxView Margin="10,0,0,0" HeightRequest="1" BackgroundColor="Gray"/>
+				<!-- Item7 -->
+				<StackLayout Orientation="Horizontal" Padding="10,5,10,0" HorizontalOptions="FillAndExpand">
+					<Label Text="本番" HorizontalOptions="StartAndExpand"/>
+					<Label Text="20000" HorizontalOptions="End"/>
+					<Switch IsToggled="{Binding IsAggreeItem7}" />
+				</StackLayout>
+				<BoxView Margin="10,0,0,0" HeightRequest="1" BackgroundColor="Gray"/>
+				<!-- Item8 -->
+				<StackLayout Orientation="Horizontal" Padding="10,5,10,0" HorizontalOptions="FillAndExpand">
+					<Label Text="生本番" HorizontalOptions="StartAndExpand"/>
+					<Label Text="30000" HorizontalOptions="End"/>
+					<Switch IsToggled="{Binding IsAggreeItem8}" />
+				</StackLayout>
+				<BoxView Margin="10,0,0,0" HeightRequest="1" BackgroundColor="Gray"/>
+				<!-- Item9 -->
+				<StackLayout Orientation="Horizontal" Padding="10,5,10,0" HorizontalOptions="FillAndExpand">
+					<Label Text="中出" HorizontalOptions="StartAndExpand"/>
+					<Label Text="10000" HorizontalOptions="End"/>
+					<Switch IsToggled="{Binding IsAggreeItem9}" />
+				</StackLayout>
+				<BoxView Margin="10,0,0,0" HeightRequest="1" BackgroundColor="Gray"/>
+				<!-- Total -->
+				<StackLayout Orientation="Horizontal" Padding="10,15,10,0" HorizontalOptions="FillAndExpand">
+					<Label Text="Total" HorizontalOptions="StartAndExpand"/>
+					<Label Text="{Binding TotalPrice}" HorizontalOptions="End"/>
+				</StackLayout>
+				<!-- Button -->
+				<ActivityIndicator IsRunning="{Binding IsBusy}"/>
+				<Button Text="保存" Command="{Binding SaveCommand}" 
+					Margin="10,5,10,20"
+					TextColor="White"
+					BackgroundColor="Blue" BorderRadius="5" />
+			</StackLayout>
+		</ScrollView>
+	</ContentPage.Content>
+</ContentPage>
