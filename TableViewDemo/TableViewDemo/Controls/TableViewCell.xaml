@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentView 
+		xmlns="http://xamarin.com/schemas/2014/forms" 
+		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+		BackgroundColor="White"
+		x:Class="TableViewDemo.Controls.TableViewCell">
+	<ContentView.Content>
+		<Grid RowSpacing="0" ColumnSpacing="0">
+			<Grid.RowDefinitions>
+				<RowDefinition Height="44"></RowDefinition>
+				<RowDefinition Height="1"></RowDefinition>
+			</Grid.RowDefinitions>
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="15"></ColumnDefinition>
+				<ColumnDefinition Width="Auto"></ColumnDefinition>
+				<ColumnDefinition Width="*"></ColumnDefinition>
+			</Grid.ColumnDefinitions>
+			<StackLayout Spacing="2" Orientation="Horizontal" 
+					Grid.Row="0" Grid.Column="1">
+				<Label x:Name="lblLabel" Text="LabelText" VerticalOptions="Center" FontSize="16" TextColor="#3A3A3A"/>	
+			</StackLayout>
+			<ContentView x:Name="cvPlaceholder" 
+					VerticalOptions="Center" 
+					Margin="10,11,16,12" 
+					Grid.Row="0" Grid.Column="2">
+				<Label x:Name="lblText"
+					Text="this is text" 
+					FontSize="16" TextColor="#6D717A" 
+					HorizontalOptions="End"/>
+			</ContentView>
+			<BoxView x:Name="bvBottom1" BackgroundColor="#DEDEDE" 
+				Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2"/>
+			<BoxView x:Name="bvBottom2" BackgroundColor="#DEDEDE" 
+				Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3"
+				IsVisible="false"/>
+		</Grid>
+	</ContentView.Content>
+</ContentView>

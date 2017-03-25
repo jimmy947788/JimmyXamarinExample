@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentView 
+		xmlns="http://xamarin.com/schemas/2014/forms" 
+		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+		x:Class="TableViewDemo.Controls.Button">
+	<AbsoluteLayout>
+		<Image x:Name="imgBackground" Source="btn_bg"
+			AbsoluteLayout.LayoutBounds="0,0,1,50"
+			AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional"/>
+		<Label x:Name="lblText" Text="" FontSize="18" TextColor="#FFFFFF" 
+				VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"
+				AbsoluteLayout.LayoutBounds="0,0,1,50"
+				AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional"/>
+		<RelativeLayout.GestureRecognizers>
+			<TapGestureRecognizer Tapped="Button_Tapped" />
+		</RelativeLayout.GestureRecognizers>
+	</AbsoluteLayout>
+</ContentView>

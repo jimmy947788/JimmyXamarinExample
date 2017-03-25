@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentView 
+		xmlns="http://xamarin.com/schemas/2014/forms" 
+		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+		x:Class="TableViewDemo.Controls.SwitchButton">
+	<ContentView.Content>
+		<RelativeLayout x:Name="rlFrame" Margin="0" Padding="0">
+			<Image x:Name="imgBG" Source="swbtn_white_background.png" WidthRequest="60" HeightRequest="28"
+					RelativeLayout.XConstraint="{
+						ConstraintExpression 
+							Type=Constant, 
+                            Constant=0
+					}"
+             		RelativeLayout.YConstraint="{
+						ConstraintExpression 
+							Type=Constant, 
+                            Constant=0
+					}"/>
+			<Image x:Name="imgThumb" Source="swbtn_thumb.png" WidthRequest="31" HeightRequest="31"
+					RelativeLayout.XConstraint="{
+						ConstraintExpression 
+							Type=Constant, 
+                            Constant=1
+					}"
+             		RelativeLayout.YConstraint="{
+						ConstraintExpression 
+							Type=Constant, 
+                            Constant=1
+					}"/>
+			<RelativeLayout.GestureRecognizers>
+				<TapGestureRecognizer Tapped="SwitchButton_Tapped" />
+			</RelativeLayout.GestureRecognizers>
+		</RelativeLayout>
+	</ContentView.Content>
+</ContentView>

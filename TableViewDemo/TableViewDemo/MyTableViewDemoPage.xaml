@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+		xmlns="http://xamarin.com/schemas/2014/forms" 
+		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+		xmlns:controls="clr-namespace:TableViewDemo.Controls" 
+		Padding="0,20,0,0"
+		BackgroundColor="#F2F3F5"
+		x:Class="TableViewDemo.MyTableViewDemoPage">
+	<StackLayout>
+		<StackLayout Spacing="0" 
+						Margin="0,10,0,0"
+						VerticalOptions="Start">
+			<controls:SwitchTableViewCell x:Name="mySwitch"
+				LabelColor="Red"/>
+			<controls:PickerTableViewCell x:Name="myPicker"
+				LabelColor="Green">
+				<controls:PickerTableViewCell.Items>
+					<x:String>1111</x:String>
+					<x:String>2222</x:String>
+					<x:String>3333</x:String>
+					<x:String>4444</x:String>
+				</controls:PickerTableViewCell.Items>
+			</controls:PickerTableViewCell>
+			<controls:EntryTableViewCell x:Name="myEntery"
+				LabelColor="Yellow"/>
+			<controls:TableViewCell 
+				Label="Readonly"
+				IsBottom="true"/>
+		</StackLayout>
+		<Button Text="Save" Clicked="Save_Clicked" />
+		<controls:Button 
+			Text="Save To" 
+			Tapped="Save_Clicked" 
+			Margin="5,10,5,0"/>
+	</StackLayout>
+</ContentPage>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<controls:TableViewCell 
+		xmlns="http://xamarin.com/schemas/2014/forms" 
+		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+		xmlns:controls="clr-namespace:TableViewDemo.Controls" 
+		x:Class="TableViewDemo.Controls.SwitchTableViewCell">
+	<controls:TableViewCell.Placeholder>
+		<controls:SwitchButton x:Name="switchButton" 
+			HorizontalOptions="End" />
+	</controls:TableViewCell.Placeholder>
+</controls:TableViewCell>

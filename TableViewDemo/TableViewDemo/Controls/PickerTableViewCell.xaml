@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<controls:TableViewCell  
+		xmlns="http://xamarin.com/schemas/2014/forms" 
+		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+		xmlns:controls="clr-namespace:TableViewDemo.Controls" 
+		x:Class="TableViewDemo.Controls.PickerTableViewCell">
+	<controls:TableViewCell.Placeholder>
+		<StackLayout Orientation="Horizontal" Spacing="10">
+			<Label x:Name="lblText"
+				TextColor="#666666"
+				Text="{Binding Text}"
+				HorizontalOptions="EndAndExpand"/>
+			<Image Source="ArrowNext.png" 
+				WidthRequest="9.48" 
+				HorizontalOptions="End"/>
+			<Picker x:Name="picker" 
+					WidthRequest="0" 
+					HeightRequest="0"
+					SelectedIndexChanged="Picker_SelectedIndexChanged">
+			</Picker>
+		</StackLayout>
+	</controls:TableViewCell.Placeholder>
+	<controls:TableViewCell.GestureRecognizers>
+		<TapGestureRecognizer Tapped="PickerTableViewCell_Tapped" />
+	</controls:TableViewCell.GestureRecognizers>
+</controls:TableViewCell >

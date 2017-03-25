@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+		xmlns:local="clr-namespace:TableViewDemo"
+		Padding="0,20,0,0"
+		x:Class="TableViewDemo.TableViewDemoPage">
+	<TableView Intent="Settings">
+		<TableView.Root>
+			<TableSection Title="My Profile">
+				<SwitchCell
+					x:Name="SwitchCell1"
+					Text="AAAA" />
+				<EntryCell Label="BBBG" 
+					LabelColor="Green"
+					Text="CCCC" />
+				<ViewCell>
+					<Slider />
+				</ViewCell>
+			</TableSection>
+			<TableSection Title="My Profile2">
+				<SwitchCell
+					
+					Text="AAAA" />
+				<EntryCell Label="BBBG" 
+					LabelColor="Green"
+					Text="CCCC" />
+				<ViewCell>
+					<Slider />
+				</ViewCell>
+			</TableSection>
+		</TableView.Root>
+	</TableView>
+</ContentPage>
