@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+		xmlns="http://xamarin.com/schemas/2014/forms" 
+		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+		x:Class="SQliteDemo.EditPage">
+	<ContentPage.Content>
+		<StackLayout>
+			<TableView HasUnevenRows="true" Intent="Settings">
+				<TableView.Root>
+					<TableSection>
+						<ViewCell>
+							<Image HorizontalOptions="Center"
+								WidthRequest="200" 
+								HeightRequest="200"
+								Source="{Binding Photo}"/>
+						</ViewCell>
+						<EntryCell Label="名前" Text="{Binding Name}"/>
+						<EntryCell Label="身長" Text="{Binding Height}"/>
+						<EntryCell Label="乳" Text="{Binding BreastType}"/>
+						<EntryCell Label="体型" Text="{Binding BodyType}"/>
+						<EntryCell Label="カップ" Text="{Binding Cup}"/>
+						<EntryCell Label="バスト" Text="{Binding Bust}"/>
+						<EntryCell Label="ウエスト" Text="{Binding Waist}"/>
+						<EntryCell Label="ヒップ" Text="{Binding Hip}"/>
+						<EntryCell Label="血液型" Text="{Binding BloodType}"/>
+						<EntryCell Label="星座" Text="{Binding Sign}"/>
+						<EntryCell Label="Photo" Text="{Binding Photo}"/>
+					</TableSection>
+				</TableView.Root>
+			</TableView>
+			<Button Text="Save" Clicked="Save_Clicked" />
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>

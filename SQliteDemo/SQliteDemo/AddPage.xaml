@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+		xmlns="http://xamarin.com/schemas/2014/forms" 
+		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+		Title="Add Actor"
+		x:Class="SQliteDemo.AddPage">
+	<ContentPage.Content>
+		<StackLayout>
+			<TableView HasUnevenRows="true" Intent="Settings">
+				<TableView.Root>
+					<TableSection>
+						<EntryCell Label="ID" Text="{Binding ID}"/>
+						<EntryCell Label="名前" Text="{Binding Name}"/>
+						<EntryCell Label="身長" Text="{Binding Height}"/>
+						<EntryCell Label="乳" Text="{Binding BreastType}"/>
+						<EntryCell Label="体型" Text="{Binding BodyType}"/>
+						<EntryCell Label="カップ" Text="{Binding Cup}"/>
+						<EntryCell Label="バスト" Text="{Binding Bust}"/>
+						<EntryCell Label="ウエスト" Text="{Binding Waist}"/>
+						<EntryCell Label="ヒップ" Text="{Binding Hip}"/>
+						<EntryCell Label="血液型" Text="{Binding BloodType}"/>
+						<EntryCell Label="星座" Text="{Binding Sign}"/>
+						<EntryCell Label="Photo" Text="{Binding Photo}"/>
+					</TableSection>
+				</TableView.Root>
+			</TableView>
+			<Button Text="Save" Clicked="Save_Clicked" />
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>

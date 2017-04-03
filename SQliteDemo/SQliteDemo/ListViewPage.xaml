@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+	xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	Title="Toyko-Hot"
+	x:Class="SQliteDemo.ListViewPage">
+	<ListView x:Name="listview"
+			HasUnevenRows="true"
+			ItemTapped="Handle_ItemTapped">
+		<ListView.ItemTemplate>
+			<DataTemplate>
+				<ViewCell>
+					 <ViewCell.ContextActions>
+						<MenuItem Text="Edit" 
+							Clicked="Edit_Clicked"
+							CommandParameter="{Binding .}"/>
+						<MenuItem Text="Delete"
+							Clicked="Delete_Clicked"
+							CommandParameter="{Binding .}"  
+							IsDestructive="True" />
+					</ViewCell.ContextActions>
+					<StackLayout Orientation="Horizontal">
+						<Image Source="{Binding Photo}"
+							HeightRequest="60"
+							WidthRequest="60"/>
+						<Label Text="{Binding Name}"/>
+					</StackLayout>
+				</ViewCell>
+			</DataTemplate>
+		</ListView.ItemTemplate>
+	</ListView>
+</ContentPage>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage 
+	xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	xmlns:local="clr-namespace:SQliteDemo" 
+	x:Class="SQliteDemo.SQliteDemoPage">
+	<StackLayout>
+		<TableView 
+			HasUnevenRows="true" 
+			Intent="Settings">
+			<TableView.Root>
+				<TableSection>
+					<EntryCell x:Name="settingEntry1"/>
+					<EntryCell x:Name="settingEntry2"/>
+					<EntryCell x:Name="settingEntry3"/>
+				</TableSection>
+			</TableView.Root>
+		</TableView>
+		<Button Text="Save" Clicked="Save_Clicked"  />
+	</StackLayout>
+</ContentPage>
