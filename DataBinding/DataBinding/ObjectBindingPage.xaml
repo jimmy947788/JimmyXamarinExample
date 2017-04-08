@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+	xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	xmlns:local="clr-namespace:DataBinding"
+	x:Class="DataBinding.ObjectBindingPage">
+	<ContentPage.Resources>
+    	<ResourceDictionary>
+			<local:MyObject x:Name="myObject" x:Key="myObject" />
+		</ResourceDictionary>
+	</ContentPage.Resources>
+	
+	<!--<ContentPage.Content>
+		<StackLayout Spacing="20" Padding="20">
+			
+			<Entry BindingContext="{x:Reference Name=myObject}"
+				Text="{Binding Path=MyValue}"/>
+			
+			<Slider BindingContext="{x:Reference Name=myObject}" 
+				Value="{Binding Path=MyValue}"/>
+		</StackLayout>
+	</ContentPage.Content>-->
+	<!--<ContentPage.Content>
+		<StackLayout HorizontalOptions="Center"
+				VerticalOptions="Center">
+			<Label Text="{Binding Path=CurrentTime, Mode=OneWay}"/>
+		</StackLayout>
+	</ContentPage.Content>-->
+
+	<ContentPage.Content>
+		<StackLayout VerticalOptions="Center">
+			<Slider x:Name="Slider1" />
+			<Button Text="Set Value" Clicked="Handle_Clicked" />
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>
