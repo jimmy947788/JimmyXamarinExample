@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+		xmlns="http://xamarin.com/schemas/2014/forms" 
+		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+		xmlns:local="clr-namespace:WebViewDemo" 
+		xmlns:controls="clr-namespace:XLabs.Forms.Controls;assembly=XLabs.Forms"
+		x:Class="WebViewDemo.HybirdWebViewPage">
+	<ContentPage.Content>
+		<controls:HybridWebView x:Name="webview">
+		</controls:HybridWebView>
+		
+	</ContentPage.Content>
+</ContentPage>

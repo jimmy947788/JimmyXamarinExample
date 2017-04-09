@@ -1,0 +1,54 @@
+﻿
+<html>
+	<head>
+		<script type="text/javascript" src="Chart.js"></script>
+		<script type="text/javascript">
+			function Callback()
+			{
+				 Native("dataCallback", "this is callback");
+			}
+			function JsSayHello(name)
+			{
+				alert("Hello "+ name);
+			}
+
+			function Add(a, b)
+			{
+				return a+b;
+			}
+		</script>
+		<title>Chart Demo</title>
+	</head>
+	<body>
+		<input type="button" value="Call Back!!" onclick="Callback();"/>
+		<canvas id="myChart" width="400" height="400"></canvas>
+		<script type="text/javascript">
+				var data = {
+				    labels: [
+				        "Red",
+				        "Blue",
+				        "Yellow"
+				    ],
+				    datasets: [
+				        {
+				            data: [100 ,200, 300],
+				            backgroundColor: [
+				                "#FF6384",
+				                "#36A2EB",
+				                "#FFCE56"
+				            ],
+				            hoverBackgroundColor: [
+				                "#FF6384",
+				                "#36A2EB",
+				                "#FFCE56"
+				            ]
+				        }]
+				};
+				var ctx = document.getElementById("myChart");
+				var myPieChart = new Chart(ctx,{
+				    type: 'pie',
+				    data: data
+				});
+		</script>
+	</body>
+</html>
