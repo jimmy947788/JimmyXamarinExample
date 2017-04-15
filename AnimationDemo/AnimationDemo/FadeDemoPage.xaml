@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+	xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	x:Class="AnimationDemo.FadeDemoPage"
+	Title="Fade">
+	<StackLayout>
+		<Image x:Name="logo1"
+			Source="AUTOBOT.gif" 
+			WidthRequest="100" 
+			HeightRequest="100" 
+			HorizontalOptions="Center"
+			Opacity="0"
+			VerticalOptions="CenterAndExpand"/>
+		<Image x:Name="logo2"
+			Source="DECEPTICON.gif" 
+			WidthRequest="100" 
+			HeightRequest="100" 
+			HorizontalOptions="Center"
+			Opacity="1"
+			VerticalOptions="CenterAndExpand"/>
+		<StackLayout Margin="20" VerticalOptions="End">
+			<Button Text="Fade In" Clicked="FadeIn_Clicked"/>
+			<Button Text="Fade Out" Clicked="FadeOut_Clicked"/>
+		</StackLayout>
+	</StackLayout>
+</ContentPage>

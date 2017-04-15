@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+	xmlns="http://xamarin.com/schemas/2014/forms"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	x:Class="AnimationDemo.ScaleDemoPage"
+	Title="Scale">
+	<StackLayout>
+		<Image x:Name="logo"
+			Source="AUTOBOT.gif" 
+			WidthRequest="100" 
+			HeightRequest="100" 
+			HorizontalOptions="Center"
+			VerticalOptions="CenterAndExpand"/>
+		<StackLayout Margin="20" VerticalOptions="End">
+			<Button Text="Scale x3" CommandParameter="3" Clicked="Scale_Click"/>
+			<Button Text="Scale x1" CommandParameter="1" Clicked="Scale_Click"/>
+			<Button Text="Scale x0.3" CommandParameter="0.3" Clicked="Scale_Click"/>
+		</StackLayout>
+	</StackLayout>
+</ContentPage>

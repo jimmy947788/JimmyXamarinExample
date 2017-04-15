@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+	xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	x:Class="AnimationDemo.LayoutDemoPage"
+	Title="Layout">
+	<StackLayout>
+		<StackLayout Orientation="Horizontal"
+			Spacing="0"
+			VerticalOptions="CenterAndExpand">
+			<Image x:Name="gohan"
+				Source="A001.png" 
+				HorizontalOptions="Start"/>
+			<Image x:Name="power"
+				IsVisible="false"
+				Source="A004.png" 
+				Aspect="Fill"
+				HorizontalOptions="Start"/>
+		</StackLayout>
+
+		<StackLayout Margin="20" VerticalOptions="End">
+			<Button Text="Play" Clicked="Play_Clicked" />
+		</StackLayout>
+	</StackLayout>
+</ContentPage>

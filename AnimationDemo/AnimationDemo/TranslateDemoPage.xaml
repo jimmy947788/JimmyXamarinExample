@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+	xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	x:Class="AnimationDemo.TranslateDemoPage"
+	Title="Translate">
+	<StackLayout>
+		<Image x:Name="logo"
+			Source="AUTOBOT.gif" 
+			WidthRequest="100" 
+			HeightRequest="100" 
+			HorizontalOptions="Center"
+			VerticalOptions="CenterAndExpand"/>
+		<StackLayout Margin="20" VerticalOptions="End">
+			<Button Text="X +100" CommandParameter="+100" Clicked="TranslateX_Clicked" />
+			<Button Text="X -100" CommandParameter="-100" Clicked="TranslateX_Clicked" />
+			<Button Text="Y +100" CommandParameter="+100" Clicked="TranslateY_Clicked" />
+			<Button Text="Y -100" CommandParameter="-100" Clicked="TranslateY_Clicked" />
+		</StackLayout>
+	</StackLayout>
+</ContentPage>

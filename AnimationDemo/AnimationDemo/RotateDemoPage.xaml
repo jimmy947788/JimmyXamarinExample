@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+	xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	x:Class="AnimationDemo.RotateDemoPage"
+	Title="Rotate">
+	<StackLayout>
+		<Image x:Name="logo"
+			Source="AUTOBOT.gif" 
+			WidthRequest="100" 
+			HeightRequest="100" 
+			HorizontalOptions="Center"
+			VerticalOptions="CenterAndExpand"/>
+		<StackLayout Margin="20" VerticalOptions="End">
+			<Button Text="Rotat Right 100" CommandParameter="100" Clicked="Rotat_Clicked" />
+			<Button Text="Rotat Left 100" CommandParameter="-100" Clicked="Rotat_Clicked" />
+
+			<Button Text="ReRotae 100" CommandParameter="100" Clicked="ReRotae_Clicked" />
+			<Button Text="ReRotae -100" CommandParameter="-100" Clicked="ReRotae_Clicked" />
+		</StackLayout>
+	</StackLayout>
+</ContentPage>
