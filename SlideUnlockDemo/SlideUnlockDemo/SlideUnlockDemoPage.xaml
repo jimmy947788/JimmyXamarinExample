@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+		xmlns:local="clr-namespace:SlideUnlockDemo"
+		xmlns:controls="clr-namespace:SlideUnlockDemo.Controls" 
+		x:Class="SlideUnlockDemo.SlideUnlockDemoPage"
+		Padding="20">
+	<controls:SlideToUnlock
+		x:Name="slideToUnlock"
+		SlideText="Slide to Unlock"
+		UnlockText="Unlocked !!"
+		Unlock="Handle_Unlock"
+		VerticalOptions="Center"/>
+</ContentPage>
