@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+        xmlns:local="clr-namespace:CustomCameraDemo"
+        xmlns:controls="clr-namespace:CustomCameraDemo.Controls"
+        x:Class="CustomCameraDemo.TakePhotoPage">
+	<ContentPage.Content>
+        <AbsoluteLayout>
+            <controls:CameraPreview x:Name="cameraPreview"
+                AbsoluteLayout.LayoutBounds="0,0,1,1"
+                AbsoluteLayout.LayoutFlags="All"/>
+            <Image Source="SwitchCamera.png"
+                AbsoluteLayout.LayoutBounds="0.95,0.05,50,50"
+                AbsoluteLayout.LayoutFlags="PositionProportional">
+                <Image.GestureRecognizers>        
+                    <TapGestureRecognizer Tapped="imgSwitchCamera_Tapped"/>  
+                </Image.GestureRecognizers>
+            </Image>
+            <Image Source="TakePhoto.png"
+                AbsoluteLayout.LayoutBounds="0.5,0.95,80,80"
+                AbsoluteLayout.LayoutFlags="PositionProportional">
+                <Image.GestureRecognizers>        
+                    <TapGestureRecognizer Tapped="imgTakePhoto_Tapped"/>  
+                </Image.GestureRecognizers>
+            </Image>
+        </AbsoluteLayout>
+	</ContentPage.Content>
+</ContentPage>
